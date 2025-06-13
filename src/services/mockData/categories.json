@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Food & Dining",
+    "type": "expense",
+    "color": "#EF4444",
+    "icon": "UtensilsCrossed"
+  },
+  {
+    "id": "2",
+    "name": "Transportation",
+    "type": "expense",
+    "color": "#F59E0B",
+    "icon": "Car"
+  },
+  {
+    "id": "3",
+    "name": "Entertainment",
+    "type": "expense",
+    "color": "#8B5CF6",
+    "icon": "Gamepad2"
+  },
+  {
+    "id": "4",
+    "name": "Shopping",
+    "type": "expense",
+    "color": "#EC4899",
+    "icon": "ShoppingBag"
+  },
+  {
+    "id": "5",
+    "name": "Bills & Utilities",
+    "type": "expense",
+    "color": "#06B6D4",
+    "icon": "Receipt"
+  },
+  {
+    "id": "6",
+    "name": "Healthcare",
+    "type": "expense",
+    "color": "#10B981",
+    "icon": "Heart"
+  },
+  {
+    "id": "7",
+    "name": "Salary",
+    "type": "income",
+    "color": "#22C55E",
+    "icon": "Briefcase"
+  },
+  {
+    "id": "8",
+    "name": "Freelance",
+    "type": "income",
+    "color": "#3B82F6",
+    "icon": "Laptop"
+  }
+]

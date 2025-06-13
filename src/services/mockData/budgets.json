@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "category": "Food & Dining",
+    "amount": 800,
+    "period": "monthly",
+    "spent": 0,
+    "createdAt": "1/1/2024 12:00:00 AM.000Z"
+  },
+  {
+    "id": "2",
+    "category": "Transportation",
+    "amount": 400,
+    "period": "monthly",
+    "spent": 0,
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "category": "Entertainment",
+    "amount": 300,
+    "period": "monthly",
+    "spent": 0,
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "category": "Shopping",
+    "amount": 500,
+    "period": "monthly",
+    "spent": 0,
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "5",
+    "category": "Bills & Utilities",
+    "amount": 1500,
+    "period": "monthly",
+    "spent": 0,
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+]

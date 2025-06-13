@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Emergency Fund",
+    "targetAmount": 10000,
+    "currentAmount": 3500,
+    "deadline": "2024-12-31",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "name": "Vacation to Europe",
+    "targetAmount": 5000,
+    "currentAmount": 1200,
+    "deadline": "2024-08-15",
+    "createdAt": "1/1/2024 12:00:00 AM.000Z"
+  },
+  {
+    "id": "3",
+    "name": "New Laptop",
+    "targetAmount": 2500,
+    "currentAmount": 800,
+    "deadline": "2024-06-30",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "name": "Home Down Payment",
+    "targetAmount": 50000,
+    "currentAmount": 12000,
+    "deadline": "2025-12-31",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "5",
+    "name": "Car Replacement Fund",
+    "targetAmount": 25000,
+    "currentAmount": 5000,
+    "deadline": "2025-06-30",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+]
