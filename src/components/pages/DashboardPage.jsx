@@ -14,8 +14,8 @@ import BudgetStatusSection from '@/components/organisms/BudgetStatusSection';
 import GoalsOverviewSection from '@/components/organisms/GoalsOverviewSection';
 import TransactionForm from '@/components/organisms/TransactionForm'; // For adding transactions from dashboard
 import Button from '@/components/atoms/Button';
+import ApperIcon from '@/components/ApperIcon';
 import { allCategories } from '@/utils/constants'; // Assuming this constant will be created or used globally
-
 function DashboardPage() {
   const [transactions, setTransactions] = useState([]);
   const [budgets, setBudgets] = useState([]);
