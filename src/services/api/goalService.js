@@ -1,3 +1,5 @@
+import mockGoalsData from '@/services/mockData/goals.json';
+
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 class GoalService {
@@ -12,7 +14,7 @@ class GoalService {
     }
     
     // Load initial mock data
-    const mockData = require('../mockData/goals.json');
+    const mockData = mockGoalsData || [];
     this.saveToStorage(mockData);
     return mockData;
   }
