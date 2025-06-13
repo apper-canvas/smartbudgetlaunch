@@ -1,5 +1,6 @@
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+import transactionsMockData from '../mockData/transactions.json';
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 class TransactionService {
   constructor() {
     this.transactions = this.loadFromStorage();
@@ -12,7 +13,7 @@ class TransactionService {
     }
     
     // Load initial mock data
-    const mockData = require('../mockData/transactions.json');
+const mockData = transactionsMockData;
     this.saveToStorage(mockData);
     return mockData;
   }
