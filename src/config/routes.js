@@ -18,43 +18,43 @@ export const routes = {
   dashboard: {
     id: 'dashboard',
     label: 'Dashboard',
-    path: '/dashboard',
+    path: '', // Index route for /dashboard
     icon: 'LayoutDashboard',
-component: DashboardPage
+    component: DashboardPage
   },
   transactions: {
     id: 'transactions',
     label: 'Transactions',
-    path: '/transactions',
+    path: 'transactions', // Relative path for nested route
     icon: 'Receipt',
-component: TransactionsPage
+    component: TransactionsPage
   },
   budgets: {
     id: 'budgets',
     label: 'Budgets',
-    path: '/budgets',
+    path: 'budgets', // Relative path for nested route
     icon: 'Target',
-component: BudgetsPage
+    component: BudgetsPage
   },
   goals: {
     id: 'goals',
     label: 'Goals',
-    path: '/goals',
+    path: 'goals', // Relative path for nested route
     icon: 'TrendingUp',
-component: GoalsPage
+    component: GoalsPage
   },
   charts: {
     id: 'charts',
     label: 'Charts',
-    path: '/charts',
+    path: 'charts', // Relative path for nested route
     icon: 'PieChart',
-component: ChartsPage
+    component: ChartsPage
   },
   notFound: {
     id: 'notFound',
     label: 'Not Found',
     path: '*',
-component: NotFoundPage
+    component: NotFoundPage
   }
 };
 

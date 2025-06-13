@@ -7,7 +7,7 @@ import { routes, routeArray } from './config/routes';
 function Layout() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-const navItems = routeArray.filter(route => route.id !== 'notFound' && !route.hidden);
+const navItems = routeArray.filter(route => route.id !== 'notFound' && route.id !== 'home' && !route.hidden);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -52,8 +52,8 @@ const navItems = routeArray.filter(route => route.id !== 'notFound' && !route.hi
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <NavLink
-to={item.path}
+<NavLink
+                    to={item.id === 'dashboard' ? '/dashboard' : `/dashboard/${item.path}`}
                     className={({ isActive }) =>
                       `group flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-150 ${
                         isActive
@@ -108,8 +108,8 @@ to={item.path}
                   <ul className="space-y-2">
                     {navItems.map((item) => (
                       <li key={item.id}>
-                        <NavLink
-to={item.path}
+<NavLink
+                          to={item.id === 'dashboard' ? '/dashboard' : `/dashboard/${item.path}`}
                           className={({ isActive }) =>
                             `group flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-150 ${
                               isActive
@@ -147,7 +147,7 @@ to={item.path}
 {navItems.map((item) => (
             <NavLink
               key={item.id}
-              to={item.path}
+              to={item.id === 'dashboard' ? '/dashboard' : `/dashboard/${item.path}`}
               className={({ isActive }) =>
                 `flex flex-col items-center px-3 py-2 rounded-lg text-xs font-medium transition-all duration-150 ${
                   isActive
