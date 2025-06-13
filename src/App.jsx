@@ -9,12 +9,12 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-background">
         <Routes>
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/" element={<Layout />}>
+<Route path="/" element={<Navigate to="/dashboard" replace />} />
+<Route path="/dashboard" element={<Layout />}>
             {routeArray.map((route) => (
               <Route
                 key={route.id}
-                path={route.path}
+path={route.path === '/' ? '/dashboard' : route.path}
                 element={
                   <motion.div
                     initial={{ opacity: 0, x: 20 }}

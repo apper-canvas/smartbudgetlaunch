@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import ApperIcon from './components/ApperIcon';
+import ApperIcon from '@/components/ApperIcon';
 import { routes, routeArray } from './config/routes';
 
 function Layout() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navItems = routeArray.filter(route => route.id !== 'notFound');
+const navItems = routeArray.filter(route => route.id !== 'notFound' && !route.hidden);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -53,7 +53,7 @@ function Layout() {
               {navItems.map((item) => (
                 <li key={item.id}>
                   <NavLink
-                    to={item.path}
+to={item.path}
                     className={({ isActive }) =>
                       `group flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-150 ${
                         isActive
@@ -109,7 +109,7 @@ function Layout() {
                     {navItems.map((item) => (
                       <li key={item.id}>
                         <NavLink
-                          to={item.path}
+to={item.path}
                           className={({ isActive }) =>
                             `group flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-150 ${
                               isActive
@@ -144,7 +144,7 @@ function Layout() {
       {/* Mobile Bottom Navigation */}
       <nav className="lg:hidden flex-shrink-0 bg-white border-t border-gray-200 px-2 py-2 z-40">
         <div className="flex justify-around">
-          {navItems.slice(0, 5).map((item) => (
+{navItems.map((item) => (
             <NavLink
               key={item.id}
               to={item.path}
