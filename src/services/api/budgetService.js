@@ -1,20 +1,28 @@
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+// Import mock data using ES module syntax
+import mockBudgets from '../mockData/budgets.json';
+
 class BudgetService {
   constructor() {
-    this.budgets = this.loadFromStorage();
+    this.storageKey = 'budgets';
   }
 
-  loadFromStorage() {
-    const stored = localStorage.getItem('smartbudget_budgets');
-    if (stored) {
-      return JSON.parse(stored);
+  async loadInitialData() {
+    // Check if data already exists in storage
+    const existingData = this.getFromStorage();
+    if (existingData && existingData.length > 0) {
+      return existingData;
     }
-    
-    // Load initial mock data
-    const mockData = require('../mockData/budgets.json');
-    this.saveToStorage(mockData);
-    return mockData;
+
+    // Load initial mock data using imported JSON
+    try {
+      this.saveToStorage(mockBudgets);
+      return mockBudgets;
+    } catch (error) {
+      console.error('Failed to load initial budget data:', error);
+      return [];
+    }
   }
 
   saveToStorage(data) {
